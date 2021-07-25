@@ -30,10 +30,9 @@ public class Principal {
         System.out.println("tu número es: " + opcion);
 
         System.out.println("Tu tabla será la del número: " + opcion);
-        
-        
-        int cantidadImpares =  multiplicacion(opcion);
-        System.out.println("Cantidad de impares: " +cantidadImpares);
+
+        int cantidadImpares = multiplicacion(opcion);
+        System.out.println("Cantidad de impares: " + cantidadImpares);
 
     }
 
@@ -43,15 +42,24 @@ public class Principal {
 // otras //  NO;       ; 2          ; 1     
 //1 time //  1          ; 2         ; 3
         //   init     ; condición; incrementación 
-        int contadorImpares = 0;
+        int contadorImpares = 0, multiplicacion = 0;
         for (int i = 1; i <= 100; i = i + 1) {
-            System.out.println(opcion + " x " + i + " = " + opcion * i);
+            multiplicacion = opcion * i;
+            System.out.println(opcion + " x " + i + " = " + multiplicacion);
 
-            if ((opcion * i) % 2 == 1) {
+            if ((multiplicacion) % 2 == 1) {
                 contadorImpares++;
             }
         }
-        
+
+        System.out.println("Números imapres: ");
+        for (int i = 1; i <= 100; i = i + 1) {
+            multiplicacion = opcion * i;
+            if ((multiplicacion) % 2 == 1) {
+                System.out.print(multiplicacion + ", ");
+            }
+        }
+        System.out.println();
         return contadorImpares;
     }
 
